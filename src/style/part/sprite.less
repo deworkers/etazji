@@ -1,0 +1,528 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@bad-blue-name: 'bad-blue';
+@bad-blue-x: 97px;
+@bad-blue-y: 85px;
+@bad-blue-offset-x: -97px;
+@bad-blue-offset-y: -85px;
+@bad-blue-width: 23px;
+@bad-blue-height: 23px;
+@bad-blue-total-width: 220px;
+@bad-blue-total-height: 164px;
+@bad-blue-image: '../img/sprite.png';
+@bad-blue: 97px 85px -97px -85px 23px 23px 220px 164px '../img/sprite.png' 'bad-blue';
+@bad-name: 'bad';
+@bad-x: 185px;
+@bad-y: 127px;
+@bad-offset-x: -185px;
+@bad-offset-y: -127px;
+@bad-width: 13px;
+@bad-height: 13px;
+@bad-total-width: 220px;
+@bad-total-height: 164px;
+@bad-image: '../img/sprite.png';
+@bad: 185px 127px -185px -127px 13px 13px 220px 164px '../img/sprite.png' 'bad';
+@bad2-blue-name: 'bad2-blue';
+@bad2-blue-x: 175px;
+@bad2-blue-y: 23px;
+@bad2-blue-offset-x: -175px;
+@bad2-blue-offset-y: -23px;
+@bad2-blue-width: 29px;
+@bad2-blue-height: 24px;
+@bad2-blue-total-width: 220px;
+@bad2-blue-total-height: 164px;
+@bad2-blue-image: '../img/sprite.png';
+@bad2-blue: 175px 23px -175px -23px 29px 24px 220px 164px '../img/sprite.png' 'bad2-blue';
+@bad2-name: 'bad2';
+@bad2-x: 172px;
+@bad2-y: 71px;
+@bad2-offset-x: -172px;
+@bad2-offset-y: -71px;
+@bad2-width: 16px;
+@bad2-height: 13px;
+@bad2-total-width: 220px;
+@bad2-total-height: 164px;
+@bad2-image: '../img/sprite.png';
+@bad2: 172px 71px -172px -71px 16px 13px 220px 164px '../img/sprite.png' 'bad2';
+@bank-name: 'bank';
+@bank-x: 0px;
+@bank-y: 0px;
+@bank-offset-x: 0px;
+@bank-offset-y: 0px;
+@bank-width: 220px;
+@bank-height: 23px;
+@bank-total-width: 220px;
+@bank-total-height: 164px;
+@bank-image: '../img/sprite.png';
+@bank: 0px 0px 0px 0px 220px 23px 220px 164px '../img/sprite.png' 'bank';
+@calendar-next-name: 'calendar-next';
+@calendar-next-x: 12px;
+@calendar-next-y: 146px;
+@calendar-next-offset-x: -12px;
+@calendar-next-offset-y: -146px;
+@calendar-next-width: 11px;
+@calendar-next-height: 17px;
+@calendar-next-total-width: 220px;
+@calendar-next-total-height: 164px;
+@calendar-next-image: '../img/sprite.png';
+@calendar-next: 12px 146px -12px -146px 11px 17px 220px 164px '../img/sprite.png' 'calendar-next';
+@calendar-prev-name: 'calendar-prev';
+@calendar-prev-x: 0px;
+@calendar-prev-y: 146px;
+@calendar-prev-offset-x: 0px;
+@calendar-prev-offset-y: -146px;
+@calendar-prev-width: 12px;
+@calendar-prev-height: 18px;
+@calendar-prev-total-width: 220px;
+@calendar-prev-total-height: 164px;
+@calendar-prev-image: '../img/sprite.png';
+@calendar-prev: 0px 146px 0px -146px 12px 18px 220px 164px '../img/sprite.png' 'calendar-prev';
+@card-number-name: 'card-number';
+@card-number-x: 0px;
+@card-number-y: 23px;
+@card-number-offset-x: 0px;
+@card-number-offset-y: -23px;
+@card-number-width: 81px;
+@card-number-height: 48px;
+@card-number-total-width: 220px;
+@card-number-total-height: 164px;
+@card-number-image: '../img/sprite.png';
+@card-number: 0px 23px 0px -23px 81px 48px 220px 164px '../img/sprite.png' 'card-number';
+@close-white-name: 'close-white';
+@close-white-x: 45px;
+@close-white-y: 146px;
+@close-white-offset-x: -45px;
+@close-white-offset-y: -146px;
+@close-white-width: 12px;
+@close-white-height: 12px;
+@close-white-total-width: 220px;
+@close-white-total-height: 164px;
+@close-white-image: '../img/sprite.png';
+@close-white: 45px 146px -45px -146px 12px 12px 220px 164px '../img/sprite.png' 'close-white';
+@close-name: 'close';
+@close-x: 33px;
+@close-y: 146px;
+@close-offset-x: -33px;
+@close-offset-y: -146px;
+@close-width: 12px;
+@close-height: 12px;
+@close-total-width: 220px;
+@close-total-height: 164px;
+@close-image: '../img/sprite.png';
+@close: 33px 146px -33px -146px 12px 12px 220px 164px '../img/sprite.png' 'close';
+@comment-name: 'comment';
+@comment-x: 198px;
+@comment-y: 127px;
+@comment-offset-x: -198px;
+@comment-offset-y: -127px;
+@comment-width: 12px;
+@comment-height: 13px;
+@comment-total-width: 220px;
+@comment-total-height: 164px;
+@comment-image: '../img/sprite.png';
+@comment: 198px 127px -198px -127px 12px 13px 220px 164px '../img/sprite.png' 'comment';
+@drop-name: 'drop';
+@drop-x: 204px;
+@drop-y: 39px;
+@drop-offset-x: -204px;
+@drop-offset-y: -39px;
+@drop-width: 13px;
+@drop-height: 8px;
+@drop-total-width: 220px;
+@drop-total-height: 164px;
+@drop-image: '../img/sprite.png';
+@drop: 204px 39px -204px -39px 13px 8px 220px 164px '../img/sprite.png' 'drop';
+@etazji-sm-name: 'etazji-sm';
+@etazji-sm-x: 205px;
+@etazji-sm-y: 71px;
+@etazji-sm-offset-x: -205px;
+@etazji-sm-offset-y: -71px;
+@etazji-sm-width: 15px;
+@etazji-sm-height: 11px;
+@etazji-sm-total-width: 220px;
+@etazji-sm-total-height: 164px;
+@etazji-sm-image: '../img/sprite.png';
+@etazji-sm: 205px 71px -205px -71px 15px 11px 220px 164px '../img/sprite.png' 'etazji-sm';
+@hint-arrow-name: 'hint-arrow';
+@hint-arrow-x: 24px;
+@hint-arrow-y: 85px;
+@hint-arrow-offset-x: -24px;
+@hint-arrow-offset-y: -85px;
+@hint-arrow-width: 24px;
+@hint-arrow-height: 42px;
+@hint-arrow-total-width: 220px;
+@hint-arrow-total-height: 164px;
+@hint-arrow-image: '../img/sprite.png';
+@hint-arrow: 24px 85px -24px -85px 24px 42px 220px 164px '../img/sprite.png' 'hint-arrow';
+@icon-phone-name: 'icon-phone';
+@icon-phone-x: 73px;
+@icon-phone-y: 85px;
+@icon-phone-offset-x: -73px;
+@icon-phone-offset-y: -85px;
+@icon-phone-width: 24px;
+@icon-phone-height: 24px;
+@icon-phone-total-width: 220px;
+@icon-phone-total-height: 164px;
+@icon-phone-image: '../img/sprite.png';
+@icon-phone: 73px 85px -73px -85px 24px 24px 220px 164px '../img/sprite.png' 'icon-phone';
+@icon-walk-name: 'icon-walk';
+@icon-walk-x: 48px;
+@icon-walk-y: 85px;
+@icon-walk-offset-x: -48px;
+@icon-walk-offset-y: -85px;
+@icon-walk-width: 25px;
+@icon-walk-height: 33px;
+@icon-walk-total-width: 220px;
+@icon-walk-total-height: 164px;
+@icon-walk-image: '../img/sprite.png';
+@icon-walk: 48px 85px -48px -85px 25px 33px 220px 164px '../img/sprite.png' 'icon-walk';
+@icq-name: 'icq';
+@icq-x: 38px;
+@icq-y: 127px;
+@icq-offset-x: -38px;
+@icq-offset-y: -127px;
+@icq-width: 19px;
+@icq-height: 19px;
+@icq-total-width: 220px;
+@icq-total-height: 164px;
+@icq-image: '../img/sprite.png';
+@icq: 38px 127px -38px -127px 19px 19px 220px 164px '../img/sprite.png' 'icq';
+@mail-name: 'mail';
+@mail-x: 141px;
+@mail-y: 85px;
+@mail-offset-x: -141px;
+@mail-offset-y: -85px;
+@mail-width: 23px;
+@mail-height: 17px;
+@mail-total-width: 220px;
+@mail-total-height: 164px;
+@mail-image: '../img/sprite.png';
+@mail: 141px 85px -141px -85px 23px 17px 220px 164px '../img/sprite.png' 'mail';
+@map-icon-name: 'map-icon';
+@map-icon-x: 156px;
+@map-icon-y: 127px;
+@map-icon-offset-x: -156px;
+@map-icon-offset-y: -127px;
+@map-icon-width: 15px;
+@map-icon-height: 15px;
+@map-icon-total-width: 220px;
+@map-icon-total-height: 164px;
+@map-icon-image: '../img/sprite.png';
+@map-icon: 156px 127px -156px -127px 15px 15px 220px 164px '../img/sprite.png' 'map-icon';
+@map-name: 'map';
+@map-x: 23px;
+@map-y: 146px;
+@map-offset-x: -23px;
+@map-offset-y: -146px;
+@map-width: 10px;
+@map-height: 15px;
+@map-total-width: 220px;
+@map-total-height: 164px;
+@map-image: '../img/sprite.png';
+@map: 23px 146px -23px -146px 10px 15px 220px 164px '../img/sprite.png' 'map';
+@nearby-bus-name: 'nearby-bus';
+@nearby-bus-x: 183px;
+@nearby-bus-y: 85px;
+@nearby-bus-offset-x: -183px;
+@nearby-bus-offset-y: -85px;
+@nearby-bus-width: 16px;
+@nearby-bus-height: 16px;
+@nearby-bus-total-width: 220px;
+@nearby-bus-total-height: 164px;
+@nearby-bus-image: '../img/sprite.png';
+@nearby-bus: 183px 85px -183px -85px 16px 16px 220px 164px '../img/sprite.png' 'nearby-bus';
+@nearby-cafe-name: 'nearby-cafe';
+@nearby-cafe-x: 199px;
+@nearby-cafe-y: 85px;
+@nearby-cafe-offset-x: -199px;
+@nearby-cafe-offset-y: -85px;
+@nearby-cafe-width: 16px;
+@nearby-cafe-height: 16px;
+@nearby-cafe-total-width: 220px;
+@nearby-cafe-total-height: 164px;
+@nearby-cafe-image: '../img/sprite.png';
+@nearby-cafe: 199px 85px -199px -85px 16px 16px 220px 164px '../img/sprite.png' 'nearby-cafe';
+@nearby-metro-name: 'nearby-metro';
+@nearby-metro-x: 140px;
+@nearby-metro-y: 127px;
+@nearby-metro-offset-x: -140px;
+@nearby-metro-offset-y: -127px;
+@nearby-metro-width: 16px;
+@nearby-metro-height: 15px;
+@nearby-metro-total-width: 220px;
+@nearby-metro-total-height: 164px;
+@nearby-metro-image: '../img/sprite.png';
+@nearby-metro: 140px 127px -140px -127px 16px 15px 220px 164px '../img/sprite.png' 'nearby-metro';
+@nearby-shop-name: 'nearby-shop';
+@nearby-shop-x: 92px;
+@nearby-shop-y: 127px;
+@nearby-shop-offset-x: -92px;
+@nearby-shop-offset-y: -127px;
+@nearby-shop-width: 16px;
+@nearby-shop-height: 16px;
+@nearby-shop-total-width: 220px;
+@nearby-shop-total-height: 164px;
+@nearby-shop-image: '../img/sprite.png';
+@nearby-shop: 92px 127px -92px -127px 16px 16px 220px 164px '../img/sprite.png' 'nearby-shop';
+@nearby-sport-name: 'nearby-sport';
+@nearby-sport-x: 108px;
+@nearby-sport-y: 127px;
+@nearby-sport-offset-x: -108px;
+@nearby-sport-offset-y: -127px;
+@nearby-sport-width: 16px;
+@nearby-sport-height: 16px;
+@nearby-sport-total-width: 220px;
+@nearby-sport-total-height: 164px;
+@nearby-sport-image: '../img/sprite.png';
+@nearby-sport: 108px 127px -108px -127px 16px 16px 220px 164px '../img/sprite.png' 'nearby-sport';
+@number-name: 'number';
+@number-x: 188px;
+@number-y: 71px;
+@number-offset-x: -188px;
+@number-offset-y: -71px;
+@number-width: 17px;
+@number-height: 11px;
+@number-total-width: 220px;
+@number-total-height: 164px;
+@number-image: '../img/sprite.png';
+@number: 188px 71px -188px -71px 17px 11px 220px 164px '../img/sprite.png' 'number';
+@order-name: 'order';
+@order-x: 120px;
+@order-y: 85px;
+@order-offset-x: -120px;
+@order-offset-y: -85px;
+@order-width: 21px;
+@order-height: 19px;
+@order-total-width: 220px;
+@order-total-height: 164px;
+@order-image: '../img/sprite.png';
+@order: 120px 85px -120px -85px 21px 19px 220px 164px '../img/sprite.png' 'order';
+@rating-bg-name: 'rating-bg';
+@rating-bg-x: 86px;
+@rating-bg-y: 71px;
+@rating-bg-offset-x: -86px;
+@rating-bg-offset-y: -71px;
+@rating-bg-width: 86px;
+@rating-bg-height: 14px;
+@rating-bg-total-width: 220px;
+@rating-bg-total-height: 164px;
+@rating-bg-image: '../img/sprite.png';
+@rating-bg: 86px 71px -86px -71px 86px 14px 220px 164px '../img/sprite.png' 'rating-bg';
+@rating-one-name: 'rating-one';
+@rating-one-x: 171px;
+@rating-one-y: 127px;
+@rating-one-offset-x: -171px;
+@rating-one-offset-y: -127px;
+@rating-one-width: 14px;
+@rating-one-height: 14px;
+@rating-one-total-width: 220px;
+@rating-one-total-height: 164px;
+@rating-one-image: '../img/sprite.png';
+@rating-one: 171px 127px -171px -127px 14px 14px 220px 164px '../img/sprite.png' 'rating-one';
+@rating-tab-name: 'rating-tab';
+@rating-tab-x: 124px;
+@rating-tab-y: 127px;
+@rating-tab-offset-x: -124px;
+@rating-tab-offset-y: -127px;
+@rating-tab-width: 16px;
+@rating-tab-height: 16px;
+@rating-tab-total-width: 220px;
+@rating-tab-total-height: 164px;
+@rating-tab-image: '../img/sprite.png';
+@rating-tab: 124px 127px -124px -127px 16px 16px 220px 164px '../img/sprite.png' 'rating-tab';
+@rating-name: 'rating';
+@rating-x: 0px;
+@rating-y: 71px;
+@rating-offset-x: 0px;
+@rating-offset-y: -71px;
+@rating-width: 86px;
+@rating-height: 14px;
+@rating-total-width: 220px;
+@rating-total-height: 164px;
+@rating-image: '../img/sprite.png';
+@rating: 0px 71px 0px -71px 86px 14px 220px 164px '../img/sprite.png' 'rating';
+@search-name: 'search';
+@search-x: 76px;
+@search-y: 127px;
+@search-offset-x: -76px;
+@search-offset-y: -127px;
+@search-width: 16px;
+@search-height: 16px;
+@search-total-width: 220px;
+@search-total-height: 164px;
+@search-image: '../img/sprite.png';
+@search: 76px 127px -76px -127px 16px 16px 220px 164px '../img/sprite.png' 'search';
+@skype-name: 'skype';
+@skype-x: 57px;
+@skype-y: 127px;
+@skype-offset-x: -57px;
+@skype-offset-y: -127px;
+@skype-width: 19px;
+@skype-height: 19px;
+@skype-total-width: 220px;
+@skype-total-height: 164px;
+@skype-image: '../img/sprite.png';
+@skype: 57px 127px -57px -127px 19px 19px 220px 164px '../img/sprite.png' 'skype';
+@slider-arrow-name: 'slider-arrow';
+@slider-arrow-x: 0px;
+@slider-arrow-y: 85px;
+@slider-arrow-offset-x: 0px;
+@slider-arrow-offset-y: -85px;
+@slider-arrow-width: 24px;
+@slider-arrow-height: 42px;
+@slider-arrow-total-width: 220px;
+@slider-arrow-total-height: 164px;
+@slider-arrow-image: '../img/sprite.png';
+@slider-arrow: 0px 85px 0px -85px 24px 42px 220px 164px '../img/sprite.png' 'slider-arrow';
+@sm-name: 'sm';
+@sm-x: 204px;
+@sm-y: 23px;
+@sm-offset-x: -204px;
+@sm-offset-y: -23px;
+@sm-width: 16px;
+@sm-height: 16px;
+@sm-total-width: 220px;
+@sm-total-height: 164px;
+@sm-image: '../img/sprite.png';
+@sm: 204px 23px -204px -23px 16px 16px 220px 164px '../img/sprite.png' 'sm';
+@telegram-name: 'telegram';
+@telegram-x: 164px;
+@telegram-y: 85px;
+@telegram-offset-x: -164px;
+@telegram-offset-y: -85px;
+@telegram-width: 19px;
+@telegram-height: 17px;
+@telegram-total-width: 220px;
+@telegram-total-height: 164px;
+@telegram-image: '../img/sprite.png';
+@telegram: 164px 85px -164px -85px 19px 17px 220px 164px '../img/sprite.png' 'telegram';
+@viber-name: 'viber';
+@viber-x: 19px;
+@viber-y: 127px;
+@viber-offset-x: -19px;
+@viber-offset-y: -127px;
+@viber-width: 19px;
+@viber-height: 19px;
+@viber-total-width: 220px;
+@viber-total-height: 164px;
+@viber-image: '../img/sprite.png';
+@viber: 19px 127px -19px -127px 19px 19px 220px 164px '../img/sprite.png' 'viber';
+@whatsapp-name: 'whatsapp';
+@whatsapp-x: 0px;
+@whatsapp-y: 127px;
+@whatsapp-offset-x: 0px;
+@whatsapp-offset-y: -127px;
+@whatsapp-width: 19px;
+@whatsapp-height: 19px;
+@whatsapp-total-width: 220px;
+@whatsapp-total-height: 164px;
+@whatsapp-image: '../img/sprite.png';
+@whatsapp: 0px 127px 0px -127px 19px 19px 220px 164px '../img/sprite.png' 'whatsapp';
+@wifi-name: 'wifi';
+@wifi-x: 81px;
+@wifi-y: 23px;
+@wifi-offset-x: -81px;
+@wifi-offset-y: -23px;
+@wifi-width: 62px;
+@wifi-height: 42px;
+@wifi-total-width: 220px;
+@wifi-total-height: 164px;
+@wifi-image: '../img/sprite.png';
+@wifi: 81px 23px -81px -23px 62px 42px 220px 164px '../img/sprite.png' 'wifi';
+@zoom-name: 'zoom';
+@zoom-x: 143px;
+@zoom-y: 23px;
+@zoom-offset-x: -143px;
+@zoom-offset-y: -23px;
+@zoom-width: 32px;
+@zoom-height: 32px;
+@zoom-total-width: 220px;
+@zoom-total-height: 164px;
+@zoom-image: '../img/sprite.png';
+@zoom: 143px 23px -143px -23px 32px 32px 220px 164px '../img/sprite.png' 'zoom';
+@spritesheet-width: 220px;
+@spritesheet-height: 164px;
+@spritesheet-image: '../img/sprite.png';
+@spritesheet-sprites: @bad-blue @bad @bad2-blue @bad2 @bank @calendar-next @calendar-prev @card-number @close-white @close @comment @drop @etazji-sm @hint-arrow @icon-phone @icon-walk @icq @mail @map-icon @map @nearby-bus @nearby-cafe @nearby-metro @nearby-shop @nearby-sport @number @order @rating-bg @rating-one @rating-tab @rating @search @skype @slider-arrow @sm @telegram @viber @whatsapp @wifi @zoom;
+@spritesheet: 220px 164px '../img/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

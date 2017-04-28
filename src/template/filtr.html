@@ -1,0 +1,346 @@
+<div class="filtr">
+    <div class="filtr-inn">
+        <form action="" id="flat-filtr">
+            <div class="filtr-line">
+                <div class="filtr-col">
+                    <label for="">Что:</label>
+                    <div class="filtr-type">
+                        <div class="filtr-type-one active" data-type="1">Квартиры</div>
+                        <div class="filtr-type-one" data-type="2">Мини-отели</div>
+                        <div class="filtr-type-one" data-type="3">Хостелы</div>
+                    </div>
+                    <input type="hidden" name="type">
+                </div>
+                <div class="filtr-col">
+                    <div class="filtr-date">Выберете дату заселения</div>
+                    <div class="calendar-box">
+                        <div class="calendar-box-top">
+                            <div class="calendar-box-col">
+                                <span>Период заселения</span>
+                            </div>
+                            <div class="calendar-box-col">
+                                <label for="">С:</label>
+                                <input name="startDate">
+                            </div>
+                            <div class="calendar-box-col">
+                                <span>—</span>
+                            </div>
+                            <div class="calendar-box-col">
+                                <label for="">ПО:</label>
+                                <input name="endDate">
+                            </div>
+                        </div>
+                        <div class="calendar-box-middle"></div>
+                        <div id="date_range"></div>
+                        <div class="calendar-box-bottom">
+                            <div class="calendar-bottom-col">
+                                Заселение: 
+                            </div>
+                            <div class="calendar-bottom-col">
+                                <input id="calendar-day" type="checkbox">
+                                <label for="calendar-day">Круглосуточно</label>
+                            </div>
+                            <div class="calendar-bottom-col">
+                                <input id="calendar-hour" type="checkbox">
+                                <label for="calendar-hour">Почасовое</label>
+                            </div>
+                            <div class="calendar-result">
+                                <div class="calendar-result__days"><span>12</span> дней</div>
+                                <button class="setDate">ОК</button>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="filtr-col">
+                    <label for="">Комнат:</label>
+                    <div class="filtr-type">
+                        <div class="filtr-rooms active" data-rooms="1">1</div>
+                        <div class="filtr-rooms active" data-rooms="2">2</div>
+                        <div class="filtr-rooms" data-rooms="3">3</div>
+                        <div class="filtr-rooms" data-rooms="4">4+</div>
+                    </div>
+                    <input type="hidden" name="rooms">
+                </div>
+                <div class="filtr-col">
+                    <label for="">Цена:</label>
+                    <div class="select">
+                        <input type="text" name="price" readonly="true">
+                        <div class="select-list">
+                            <div class="select-list__one">1 000-1 500 руб./сутки</div>
+                            <div class="select-list__one">1 500-2 000 руб./сутки</div>
+                            <div class="select-list__one">2 000-3 000 руб./сутки</div>
+                            <div class="select-list__one">3 000+ руб./сутки</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtr-col">
+                    <button type="submit">Показать 23 кв.</button>
+                </div>
+            </div>
+        
+            <div class="filtr-add-button"><i></i>Параметры квартиры...</div>
+            <div class="map-show-button"><i></i>Выбрать на карте...</div>
+            <div class="filtr-add">
+                <div class="filtr-add-col">
+                    <div class="filtr-add-col__title">Квартира</div>
+                    <div class="filtr-add-list">
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck1">
+                            <label for="ck1">В новостройке</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck2">
+                            <label for="ck2">Охраняемая стоянка</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck3">
+                            <label for="ck3">WI-FI</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck4">
+                            <label for="ck4">Кондиционер</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck5">
+                            <label for="ck5">Стиральная машина</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck6">
+                            <label for="ck6">Джакузи</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtr-add-col">
+                    <div class="filtr-add-col__title">Район</div>
+                    <div class="filtr-add-list">
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck7">
+                            <label for="ck7">Центр</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck8">
+                            <label for="ck8">Автовокзал</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck9">
+                            <label for="ck9">ВИЗ</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck10">
+                            <label for="ck10">Вокзал</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck11">
+                            <label for="ck11">Пионерский</label>
+                        </div>
+                        <div class="filtr-add-one">
+                            <a href="#" class="other-filtr">Выбрать другой...</a>
+                            <div class="other-filtr-inn">
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck12">
+                                    <label for="ck12">Академический</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck13">
+                                    <label for="ck13">Ботаника</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck14">
+                                    <label for="ck14">Верх-Исетский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck15">
+                                    <label for="ck15">Вторчермет</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck16">
+                                    <label for="ck16">Втузгородок</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck17">
+                                    <label for="ck17">Елизавет</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck18">
+                                    <label for="ck18">ЖБИ</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck19">
+                                    <label for="ck19">Железнодорожный</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck20">
+                                    <label for="ck20">Заречный</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck21">
+                                    <label for="ck21">Кировский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck22">
+                                    <label for="ck22">Кольцово</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck23">
+                                    <label for="ck23">Ленинский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck24">
+                                    <label for="ck24">Октябрьский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck25">
+                                    <label for="ck25">Орджоникидзевский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck26">
+                                    <label for="ck26">Парковый</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck27">
+                                    <label for="ck27">Сибирский тракт</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck28">
+                                    <label for="ck28">Синие камни</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck29">
+                                    <label for="ck29">Сортировка</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck30">
+                                    <label for="ck30">Уктус</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck31">
+                                    <label for="ck31">Уралмаш</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck32">
+                                    <label for="ck32">Химмаш</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck33">
+                                    <label for="ck33">Чкаловский</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck34">
+                                    <label for="ck34">Шарташский рынок</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck35">
+                                    <label for="ck35">Широкая речка</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck36">
+                                    <label for="ck36">Эльмаш</label>
+                                </div>
+                                <div class="filtr-add-one checkbox">
+                                    <input type="checkbox" id="ck37">
+                                    <label for="ck37">Юго-Запад</label>
+                                </div>
+                                <div class="other-filtr-bottom">
+                                    <button type="button" class="other-filtr-select">Подтвердить</button>
+                                    <button type="button" class="other-filtr-select-all">Выбрать все</button>
+                                </div>
+                                <div class="other-filtr-close"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtr-add-col">
+                    <div class="filtr-add-col__title">Условия</div>
+                    <div class="filtr-add-list">
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck38">
+                            <label for="ck38">Отчетные документы</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck39">
+                            <label for="ck39">Круглосуточное заселение</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck40">
+                            <label for="ck40">Почасовое заселение</label>
+                        </div>
+                    </div>
+                    <div class="filtr-add-col__title"><i class="sprite-bad2"></i> Спальных мест, не менее</div>
+                    <div class="filtr-type">
+                        <div class="filtr-rooms" data-place="1">1</div>
+                        <div class="filtr-rooms" data-place="2">2</div>
+                        <div class="filtr-rooms" data-place="3">3</div>
+                        <div class="filtr-rooms" data-place="4">4</div>
+                        <div class="filtr-rooms" data-place="5">5</div>
+                        <div class="filtr-rooms" data-place="6">6+</div>
+                    </div>
+                </div>
+                <div class="filtr-add-col">
+                    <div class="filtr-add-one checkbox">
+                        <input type="checkbox" id="ck41">
+                        <label for="ck41">Рекомендуем</label>
+                    </div>
+                    <div class="filtr-add-col__title">Оценка по отзывам</div>
+                    <div class="filtr-add-list">
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck43">
+                            <label for="ck43">Превосходно</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck44">
+                            <label for="ck44">Очень хорошо</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck45">
+                            <label for="ck45">Хорошо</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck46">
+                            <label for="ck46">Достаточно хорошо</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck47">
+                            <label for="ck47">Нет оценок</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtr-add-col">
+                    <div class="filtr-add-col__title">Класс квартиры</div>
+                    <div class="filtr-add-list">
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck50">
+                            <label for="ck50">Эконом</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck51">
+                            <label for="ck51">Стандарт</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck52">
+                            <label for="ck52">Полулюкс</label>
+                        </div>
+                        <div class="filtr-add-one checkbox">
+                            <input type="checkbox" id="ck53">
+                            <label for="ck53">Люкс</label>
+                        </div>
+                    </div>
+                    <button type="button" class="filtr-reset">Сбросить настройки</button>
+                </div>
+                <div class="filtr-add__close"></div>
+            </div>
+        </form>
+        <div class="map">
+            <div class="filtr-map__close"></div>
+            <div class="map-search">
+                <form action="" id="map-search">
+                    <label for="">Район, Улица, Ориентиры</label>
+                    <input class="map-search__input" type="text">
+                    <button type="submit"></button>
+                </form>
+            </div>
+            <div class="map-wrap" id="map-filtr">
+                
+            </div>
+        </div>
+    </div>
+</div>
