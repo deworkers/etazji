@@ -54,6 +54,43 @@
 				<div class="booking-top-left">
 					<div class="booking-date">
 						<div class="filtr-date">Выберете дату заселения</div>
+						<div class="calendar-box">
+	                        <div class="calendar-box-top">
+	                            <div class="calendar-box-col">
+	                                <span>Период заселения</span>
+	                            </div>
+	                            <div class="calendar-box-col">
+	                                <label for="">С:</label>
+	                                <input name="startDate">
+	                            </div>
+	                            <div class="calendar-box-col">
+	                                <span>—</span>
+	                            </div>
+	                            <div class="calendar-box-col">
+	                                <label for="">ПО:</label>
+	                                <input name="endDate">
+	                            </div>
+	                        </div>
+	                        <div class="calendar-box-middle"></div>
+	                        <div id="date_range"></div>
+	                        <div class="calendar-box-bottom">
+	                            <div class="calendar-bottom-col">
+	                                Заселение: 
+	                            </div>
+	                            <div class="calendar-bottom-col">
+	                                <input id="calendar-day" type="checkbox">
+	                                <label for="calendar-day">Круглосуточно</label>
+	                            </div>
+	                            <div class="calendar-bottom-col">
+	                                <input id="calendar-hour" type="checkbox">
+	                                <label for="calendar-hour">Почасовое</label>
+	                            </div>
+	                            <div class="calendar-result">
+	                                <div class="calendar-result__days"><span>12</span> дней</div>
+	                                <button class="setDate">ОК</button>
+	                            </div>  
+	                        </div>
+	                    </div>
 					</div>
 					<div class="booking-top__descr">
 						<i class="icon-font"></i>
