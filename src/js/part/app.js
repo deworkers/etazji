@@ -149,40 +149,8 @@ $(document).ready(function() {
     });
 
 
-    //фильтр дополнительных параметров
-    $('.filtr-add-button, .filtr-add__close').on('click', function() {
-        if ( $('.filtr-add-button').hasClass('js-open') ) {
-            $('.filtr-add').slideUp();
-            $('.filtr-add-button').removeClass('js-open');
-        } else {
-            $('.filtr-add').slideDown();
-            $('.filtr-add-button').addClass('js-open');
-        }
-    });
+    
 
-    $('.other-filtr').on('click', function(e) {
-        e.preventDefault;
-        $(this).next().slideToggle();
-    });
-
-    $('.other-filtr-select, .other-filtr-close').on('click', function() {
-        $('.other-filtr-inn').slideUp();
-    });
-
-    $('.other-filtr-select-all').on('click', function() {
-        $('.other-filtr-inn .checkbox').each(function() {
-            $(this).find('input[type="checkbox"]').prop('checked', true);
-        })
-    });
-
-    $('.filtr-reset').on('click', function(e) {
-        $('.filtr-add input[type="checkbox"]').prop('checked', false);
-        $('.filtr-add .filtr-rooms').removeClass('active');
-    });
-
-    $('.catalog-tag__one').on('click', function() {
-        $(this).remove();
-    });
 
 
     //карта объектов
@@ -356,7 +324,6 @@ $(document).ready(function() {
     });
 
     //выбор даты
-
     var setBooking = function() { //пихаем все выделенные в объект booking 
         var booking = {
             dates: [],
@@ -402,5 +369,68 @@ $(document).ready(function() {
             $('.booking-button__price').show();
         }
     });
+
+
+
+    //фильтр дополнительных параметров
+    $('.filtr-add-button, .filtr-add__close').on('click', function() {
+        if ( $('.filtr-add-button').hasClass('js-open') ) {
+            $('.filtr-add').slideUp();
+            $('.filtr-add-button').removeClass('js-open');
+        } else {
+            $('.filtr-add').slideDown();
+            $('.filtr-add-button').addClass('js-open');
+        }
+    });
+
+    $('.other-filtr').on('click', function(e) {
+        e.preventDefault;
+        $(this).next().slideToggle();
+    });
+
+    $('.other-filtr-select, .other-filtr-close').on('click', function() {
+        $('.other-filtr-inn').slideUp();
+    });
+
+    $('.other-filtr-select-all').on('click', function() {
+        $('.other-filtr-inn .checkbox').each(function() {
+            $(this).find('input[type="checkbox"]').prop('checked', true);
+
+            var thisId = $(this).find('input[type="checkbox"]').attr('id');
+            var thisTitle = $(this).find('input[type="checkbox"]').next('label').text();
+            var html = '<div class="catalog-tag__one" data-id="'+thisId+'">'+thisTitle+'</div>'
+            $('.catalog-tag').append(html);
+        })
+    });
+
+    $('.filtr-reset').on('click', function(e) {
+        $('.filtr-add input[type="checkbox"]').removeProp('checked');
+        $('.catalog-tag__one').remove();
+        $('.filtr-add .filtr-rooms').removeClass('active');
+    });
+
+    // Теги фильтра
+        $('.filtr-add-one input[type=checkbox]').on('change', function() {
+            var thisId = $(this).attr('id');
+            var thisTitle = $(this).next('label').text();
+
+            // добавление тега
+            if ( $(this).prop('checked') == true ) { 
+                
+                var html = '<div class="catalog-tag__one" data-id="'+thisId+'">'+thisTitle+'</div>'
+                $('.catalog-tag').append(html);
+                
+                // удаление тега
+                $('.catalog-tag__one').on('click', function() {
+                    $(this).remove();
+                    $('#'+thisId+'').removeProp('checked');
+                });
+
+            } else { 
+                $('div[data-id="'+thisId+'"]').remove();
+            }
+        });
+
+        
 
 });
