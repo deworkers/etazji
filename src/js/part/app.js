@@ -259,6 +259,10 @@ $(document).ready(function() {
         $('.select-number').show().animate({'top':'0px'}, 300);
     });
 
+    $('.select-number-input input').on('focus', function() {
+        $(this).next('.select-error').remove();
+    });
+
 
 
     // табы карточки
@@ -370,7 +374,13 @@ $(document).ready(function() {
         }
     });
 
-
+        //выбор с помощью выпадающего календаря
+        $('.setDate').on('click', function() {
+            var startDate = $('input[name=startDate]'),
+            endDate = $('input[name=endDate]');
+            
+            
+        })
 
     //фильтр дополнительных параметров
     $('.filtr-add-button, .filtr-add__close').on('click', function() {
@@ -431,6 +441,17 @@ $(document).ready(function() {
             }
         });
 
-        
+    //звонить ночью
+    var date = new Date();
+
+    var nowHours = date.getHours(),
+    nightStart = 20,
+    nightEnd = 8;
+
+    if ( nowHours > nightEnd && nowHours < nightStart ) {
+        $('.night-call').hide(); //день
+    } else {
+        $('.night-call').show(); // ночь
+    }
 
 });

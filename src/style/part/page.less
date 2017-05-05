@@ -2155,6 +2155,30 @@ body {
     }
 }
 
+.select-error {
+    position: absolute;
+    background: @color_red;
+    color: #fff;
+    padding: 5px 5px;
+    width: 230px;
+    font-size: 12px;
+    left: -10px;
+    top: 35px;
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent @color_red transparent;
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        margin-left: -8px;
+    }
+
+}
+
 .select-number__title {
     display: inline-block;
     vertical-align: middle;
@@ -2751,4 +2775,21 @@ body {
     outline: 0;
     padding: 0 5px;
     cursor: pointer;
+}
+
+
+.night-call {
+    position: absolute;
+    width: 100%;
+    background: @color_green;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    &:after {
+        content: "";
+        .sprite(@night-call);
+        position: absolute;
+        bottom: -36px;
+        left: 48%;
+    }
 }

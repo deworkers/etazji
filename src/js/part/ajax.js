@@ -112,18 +112,17 @@ $(document).ready(function() {
     //картира по номеру
     $('.select-number__button').on('click', function(event) {
         event.preventDefault();
-        var getKv = $('.select-number-input input').val;
+        var getKv = $('.select-number-input input').val();
         $.ajax({
             type: 'POST',
             url: '/ajax/ajax-select-number.php',
             data: {'find-kv': getKv}, // передача ID квартиры
             success: function(data) {
-                if ( data !== '' ) {
-                    console.log(data);
-                    console.log( typeof data );
-                    //window.location.href = data;
+                if ( data != false ) { 
+                    window.location.href = data;
                 } else {
                     console.log('error!');
+                    $('.select-number-input').append('<div class="select-error">Квартира с этим номером не найдена!</div>')
                 }
             }
         });
