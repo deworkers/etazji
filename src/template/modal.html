@@ -52,7 +52,7 @@
 		<div class="order__inn">
 			<div class="booking-top">
 				<div class="booking-top-left">
-					<div class="booking-date">
+					<div class="booking-date date-range">
 						<div class="filtr-date">Выберете дату заселения</div>
 						<div class="calendar-box">
 	                        <div class="calendar-box-top">
@@ -61,33 +61,33 @@
 	                            </div>
 	                            <div class="calendar-box-col">
 	                                <label for="">С:</label>
-	                                <input name="startDate">
+	                                <input name="m-startDate">
 	                            </div>
 	                            <div class="calendar-box-col">
 	                                <span>—</span>
 	                            </div>
 	                            <div class="calendar-box-col">
 	                                <label for="">ПО:</label>
-	                                <input name="endDate">
+	                                <input name="m-endDate">
 	                            </div>
 	                        </div>
 	                        <div class="calendar-box-middle"></div>
-	                        <div id="date_range"></div>
+	                        <div id="m-date_range"></div>
 	                        <div class="calendar-box-bottom">
 	                            <div class="calendar-bottom-col">
 	                                Заселение: 
 	                            </div>
 	                            <div class="calendar-bottom-col">
-	                                <input id="calendar-day" type="checkbox">
-	                                <label for="calendar-day">Круглосуточно</label>
+	                                <input id="m-calendar-day" type="checkbox">
+	                                <label for="m-calendar-day">Круглосуточно</label>
 	                            </div>
 	                            <div class="calendar-bottom-col">
-	                                <input id="calendar-hour" type="checkbox">
-	                                <label for="calendar-hour">Почасовое</label>
+	                                <input id="m-calendar-hour" type="checkbox">
+	                                <label for="m-calendar-hour">Почасовое</label>
 	                            </div>
 	                            <div class="calendar-result">
 	                                <div class="calendar-result__days"><span>12</span> дней</div>
-	                                <button class="setDate">ОК</button>
+	                                <button class="m-setDate">ОК</button>
 	                            </div>  
 	                        </div>
 	                    </div>
@@ -103,8 +103,22 @@
 						<div class="booking-button__price" style="display: none;"><span class="booking-price">18 000</span> руб./ <span class="booking-days">3</span> суток</div>
 						<div class="booking-button__text">Забронировать</div>
 					</button>
+					<div class="other-price">
+						<div class="other-price__top">
+							На <a href="#">других сайтах</a> от 18 900 руб./3 суток
+						</div>
+						<div class="other-price-list">
+							<div class="other-price-one"><a href="#">apartator.ru</a> 18 900 руб./3 суток</div>
+							<div class="other-price-one"><a href="#">avito.ru</a> 19 500 руб./3 суток</div>
+							<div class="other-price-one"><a href="#">bkd96.ru</a> 20 000 руб./3 суток</div>
+						</div>
+					</div>
 				</div>
 			</div>
+			<div class="booking-alert">
+				На выбранные даты квартира занята
+			</div>
+
 			//= calendar.html
 			<div class="modal__close"></div>
 		</div>

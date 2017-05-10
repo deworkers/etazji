@@ -128,8 +128,23 @@ $(document).ready(function() {
         }
     });
 
+    $('#m-date_range').datepicker({
+        range: 'period', // режим - выбор периода
+        numberOfMonths: 2,
+        minDate: 0,
+        onSelect: function(dateText, inst, extensionRange) {
+            // extensionRange - объект расширения
+            startDate = extensionRange.startDate;
+            endDate = extensionRange.endDate;
+            deltaDate = (endDate.getTime() - startDate.getTime()) / (1000*60*60*24);
+            $('.calendar-result__days span').text(deltaDate+1);
+            $('[name="m-startDate"]').val(extensionRange.startDateText);
+            $('[name="m-endDate"]').val(extensionRange.endDateText);
+        }
+    });
+
     $('.filtr-date').on('click', function() {
-        $('.calendar-box').fadeToggle();
+        $(this).next().fadeToggle();
     });
 
     var getDayName = function(thisDate) {
@@ -141,16 +156,12 @@ $(document).ready(function() {
         return dateText;
     }
 
-    $('.setDate').on('click', function(event) {
+    $('.setDate, .m-setDate').on('click', function(event) {
         // обработка календаря
         event.preventDefault();
         $('.calendar-box').fadeOut();
-        $('.filtr-date').html(getDayName(startDate)+' — '+getDayName(endDate));
+        $(this).parents('.date-range').find('.filtr-date').html(getDayName(startDate)+' — '+getDayName(endDate));
     });
-
-
-    
-
 
 
     //карта объектов
@@ -301,86 +312,6 @@ $(document).ready(function() {
         $('.card-tabs > div').hide();
         $('.card-tabs > div').eq(2).show();
     });
-
-    //перенос блока в календаре с прошлой строчки
-    $('.calendar-one:nth-child(7n)').not('.disabled').each(function() {
-        var setClass = String($(this).find('.calendar-one-inn').attr('class'));
-        var blockClass = setClass.split(' ')[1];
-        html = '<div class="calendar-warp '+ blockClass +'"><i></i></div>';
-        htmlAlt = '<div class="calendar-warp '+ blockClass +'" style="width: 35px"><i></i></div>';
-        if ( $(this).next().find('.calendar-one-inn').hasClass('busy') && 
-             $(this).find('.calendar-one-inn').hasClass('busy') ) 
-        {
-            $(this).next().append(htmlAlt);
-            //$(this).find('.calendar-one-inn').text('занято');
-        } else {
-            $(this).next().append(html); 
-        }
-    });
-
-    //занятые дни
-    $('.calendar-one').not('.calendar-one:nth-child(7n)').each(function() {
-        if ( $(this).find('.calendar-one-inn').hasClass('busy') && 
-             $(this).next().find('.calendar-one-inn').hasClass('busy') ) 
-        {
-            $(this).find('.calendar-one-inn').css('width', 'calc(100% - 10px)');
-        }
-    });
-
-    //выбор даты
-    var setBooking = function() { //пихаем все выделенные в объект booking 
-        var booking = {
-            dates: [],
-            days: 0,
-            price: 0
-        }
-        
-        $('.calendar-one').each(function() {
-            if ( $(this).hasClass('selected') ) {
-                var selectedDate = {
-                    date: $(this).data('date'),
-                    price: $(this).data('price'),
-                }
-
-                booking.dates.push(selectedDate.date);
-                booking.days++;
-                booking.price += selectedDate.price;
-
-                console.log(selectedDate);
-                $('.booking-price').text(booking.price);
-                $('.booking-days').text(booking.days);
-            }
-        });
-
-        console.log(booking);
-        var n = booking.dates.length-1;
-        $('.booking-date .filtr-date').text(booking.dates[0]+ ' - ' + booking.dates[n]);
-
-    }
-
-    $('.calendar-one').not('.disabled').on('click', function() {
-        if ( !$(this).find('.calendar-one-inn').hasClass('busy') ) {
-            $(this).find('.calendar-one-inn').toggleClass('booking');
-            $(this).toggleClass('selected');
-            setBooking();
-        }
-
-
-        if ( $('.calendar-one.selected').length == 0 ) {
-            $('.booking-button__price').hide();
-            $('.booking-date .filtr-date').text('Выберете дату заселения');
-        } else {
-            $('.booking-button__price').show();
-        }
-    });
-
-        //выбор с помощью выпадающего календаря
-        $('.setDate').on('click', function() {
-            var startDate = $('input[name=startDate]'),
-            endDate = $('input[name=endDate]');
-            
-            
-        })
 
     //фильтр дополнительных параметров
     $('.filtr-add-button, .filtr-add__close').on('click', function() {

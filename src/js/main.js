@@ -18,3 +18,4 @@
  
 //= part/app.js
 //= part/ajax.js
+//= part/booking.js

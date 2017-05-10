@@ -2593,6 +2593,7 @@ body {
 
     .special {
         .figure(@color_yellow);
+        color: #000;
     }
 
     .free {
@@ -2617,6 +2618,16 @@ body {
                 display: none;
             }
         }
+    }
+
+    &:nth-child(7n+6) {
+       color: @color_red;
+       font-weight: 700;
+    }
+
+    &:nth-child(7n+7) {
+       color: @color_red;
+       font-weight: 700;
     }
 
     
@@ -2767,7 +2778,8 @@ body {
     font-weight: 700;
 }
 
-.setDate {
+.setDate,
+.m-setDate {
     height: 30px;
     background: #84c224;
     color: #fff;
@@ -2792,4 +2804,37 @@ body {
         bottom: -36px;
         left: 48%;
     }
+}
+
+.other-price {
+    margin-top: 20px;
+    font-size: 14px;
+    color: @color_grey-text;
+}
+
+.other-price__top {
+    margin-bottom: 5px;
+    a {
+        border-bottom: 1px dotted @color_blue;
+    }
+}
+
+.other-price-list {
+    display: none;
+    a {
+        text-align: right;
+        display: inline-block;
+        width: 127px;
+    }
+}
+
+.other-price-one {
+    
+}
+
+.booking-alert {
+    margin: 20px 0;
+    background: @color_grey;
+    text-align: center;
+    padding: 10px 0;
 }
