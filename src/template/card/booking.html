@@ -1,0 +1,114 @@
+<div class="booking wrap" id="star-booking">
+    <div class="booking-inn clearfix">
+        <div class="booking-right">
+            <div class="booking-date date-range">
+                <div class="filtr-date">Выберете дату заселения</div>
+                <div class="calendar-box">
+                    <div class="calendar-box-top">
+                        <div class="calendar-box-col">
+                            <span>Период заселения</span>
+                        </div>
+                        <div class="calendar-box-col">
+                            <label for="">С:</label>
+                            <input name="m-startDate">
+                        </div>
+                        <div class="calendar-box-col">
+                                    <span>—</span>
+                        </div>
+                        <div class="calendar-box-col">
+                            <label for="">ПО:</label>
+                            <input name="m-endDate">
+                        </div>
+                    </div>
+                    <div class="calendar-box-middle"></div>
+                    <div id="m-date_range"></div>
+                    <div class="calendar-box-bottom">
+                        <div class="calendar-bottom-col">
+                            Заселение: 
+                        </div>
+                        <div class="calendar-bottom-col">
+                            <input id="m-calendar-day" type="checkbox">
+                            <label for="m-calendar-day">Круглосуточно</label>
+                        </div>
+                        <div class="calendar-bottom-col">
+                            <input id="m-calendar-hour" type="checkbox">
+                            <label for="m-calendar-hour">Почасовое</label>
+                        </div>
+                        <div class="calendar-result">
+                            <div class="calendar-result__days"><span>12</span> дней</div>
+                            <button class="m-setDate">ОК</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="booking-top__descr">
+                <i class="icon-font"></i>
+                Заселение в 15:00<br>
+                выселение в 13:00 следующего дня.
+            </div>
+            <div class="booking-alert">
+                На выбранные даты квартира занята
+            </div>
+            <button class="booking-button">
+                <div class="booking-button__price" style="display: none;"><span class="booking-price">18 000</span> руб./ <span class="booking-days">3</span> суток</div>
+                <div class="booking-button__text">Забронировать</div>
+
+                <div class="booking-button__bestprice"><b>Лучшая цена</b> в интернете</div>
+
+            </button>
+            <div class="other-price">
+                <div class="other-price__top">
+                    На <a href="#">других сайтах</a> от 18 900 руб./3 суток
+                </div>
+                <div class="other-price-list">
+                    <div class="other-price-one"><a href="#">apartator.ru</a> 18 900 руб./3 суток</div>
+                    <div class="other-price-one"><a href="#">avito.ru</a> 19 500 руб./3 суток</div>
+                    <div class="other-price-one"><a href="#">bkd96.ru</a> 20 000 руб./3 суток</div>
+                </div>
+            </div>
+        </div>
+        <div class="booking-left">
+           //= ../calendar.html
+        </div>
+
+        <div class="booking-end">
+            
+            <div class="booking-end-inn">
+                <div class="booking-end-left">
+                    <div class="booking-end__title">Бронирование</div>
+                    <div class="booking-end-coll">
+                        <div class="booking-end__text">Чтобы забронировать введите телефон, на
+                        который мы перезвоним и ваше имя.</div>
+                        <form action="" id="">
+                            <div class="booking-end__input modal-line">
+                                <label for="">ТЕЛЕФОН</label>
+                                <input type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="booking-end__input modal-line">
+                            
+                                <label for="">ВАШЕ ИМЯ</label>
+                                <input type="text" name="name">
+                            </div>
+                            <button class="booking-end__button">Забронировать по обратному звонку...</button>
+                            <div class="booking-end__under-text">Мы перезвоним вам и подтвердим<br>
+                            бронь в течение 5 минут.</div>
+                        </form>
+                    </div>
+                    <div class="booking-end-coll">
+                        <div class="booking-end__text">Или оплатите картой прямо на сайте</div>
+                        <button class="booking-end__button">Оплатить картой и забронировать...</button>
+                        <span class="icon-visa"></span>
+                    </div>
+                </div>
+                <div class="booking-end-right">
+                    <div class="booking-end__text">Не хотите ждать звонка?<br>
+                    Забронируйте по телефону</div>
+                    <div class="booking-end__phone">+7 (343) 222-777-0</div>
+                    <div class="booking-end__text">и скажите номер квартиры</div>
+                    <div class="card-id">2295</div>
+                </div>
+            </div>
+            <div class="booking-end__back">Вернуться к выбору дат</div>
+        </div>
+    </div>
+</div>

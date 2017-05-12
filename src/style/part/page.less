@@ -1190,6 +1190,7 @@ body {
     top: -20px;
     right: -20px;
     cursor: pointer;
+    z-index: 15;
 }
 
 .catalog-gallery {
@@ -1264,6 +1265,10 @@ body {
             }
         }
     }
+}
+
+#booking {
+    overflow: hidden;
 }
 
 .modal-sm {
@@ -2763,9 +2768,28 @@ body {
     border: none;
     color: #fff;
     width: 100%;
-    padding: 10px 0;
-    height: 60px;
+    padding: 20px 0;
+    height: 80px;
     cursor: pointer;
+    position: relative;
+}
+
+.booking-button__bestprice {
+    position: absolute;
+    color: #000;
+    bottom: 0;
+    left: 50%;
+    margin-left: -85px;
+    background: @color_yellow;
+    padding: 0 5px;
+
+}
+
+.booking {
+}
+
+.booking-inn {
+    display: none;
 }
 
 .booking-button__price {
@@ -2776,6 +2800,158 @@ body {
 .booking-button__text {
     font-size: 16px;
     font-weight: 700;
+}
+
+.booking-inn {
+    padding: 20px;
+    border: 3px solid @color_green;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.booking-left {
+    width: 70%;
+}
+
+.booking-right {
+    width: 25%;
+    float: right;
+    padding-top: 30px;
+
+    .calendar-box {
+        right: 0;
+    }
+
+    .booking-top__descr {
+        margin-bottom: 50px;
+        font-size: 12px;
+    }
+}
+
+
+.booking-end {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    z-index: 10;
+}
+
+.icon-visa {
+    .sprite(@bank);
+    display: block;
+    transform: scale(0.5);
+    position: absolute;
+    left: -10px;
+    bottom: -30px;
+}
+
+.booking-end__back {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    color: @color_blue;
+    cursor: pointer;
+    &:before {
+        content: "";
+        .sprite(@drop);
+        display: inline-block;
+        vertical-align: middle;
+        transform: rotate(90deg) scale(0.7);
+        margin-bottom: 2px;
+        margin-right: 10px;
+    }
+}
+
+.booking-end-inn {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.booking-end-left {
+    background: rgba(132, 192, 36, 0.1);
+    display: table-cell;
+    width: 70%;
+    padding: 40px 40px;
+    word-spacing: -0.35em;
+}
+
+.booking-end__title {
+    padding: 0 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.booking-end__title--modal {
+    margin-top: 60px;
+    padding-left: 80px;
+}
+
+.booking-end-coll {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 0 40px;
+}
+
+#booking {
+    .booking-end__back {
+        top: 20px;
+    }
+}
+
+.booking-end-coll--modal {
+    &:nth-child(2) {
+        padding: 0 60px 0 80px;
+        width: 60%;
+    }
+    &:nth-child(3) {
+        padding: 0 60px 0 20px;
+        width: 40%;
+    }
+    
+    .icon-visa {
+        left: 30px;
+    }
+}
+
+.booking-end__text {
+    margin-bottom: 10px;
+}
+
+.booking-end__input {
+    margin-bottom: 20px;
+}
+
+.booking-end-right {
+    display: table-cell;
+    width: 30%;
+    vertical-align: middle;
+    padding: 30px 40px;
+}
+
+.booking-end__phone {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.booking-end__button {
+    width: 100%;
+    height: 30px;
+    background: @color_green;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.booking-end__under-text {
+    color: @color_grey-text;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 .setDate,
@@ -2833,8 +3009,97 @@ body {
 }
 
 .booking-alert {
+    display: none;
     margin: 20px 0;
     background: @color_grey;
     text-align: center;
     padding: 10px 0;
+}
+
+
+.alert {
+    border-width: 3px;
+    border-style: solid;
+    padding: 30px 80px;
+    margin: 30px 0;
+}
+
+.alert--success {
+    background: rgba(132, 194, 36, 0.1);
+    border-color: @color_green;
+}
+
+.alert--warning {
+    background: rgba(231, 120, 22, 0.1);
+    border-color: @color_orange;
+}
+
+.alert--danger {
+    background: rgba(218, 36, 29, 0.1);
+    border-color: @color_red;
+}
+
+.alert__close {
+    .sprite(@close);
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+.alert-text {
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+
+.alert__title {
+    
+}
+
+
+.text {
+    margin: 50px 0;
+    word-spacing: -0.3em;
+}
+
+.text-left {
+    width: 65%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+    
+    h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.text-right {
+    width: 35%;
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+
+    h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
 }

@@ -385,4 +385,17 @@ $(document).ready(function() {
         $('.night-call').show(); // ночь
     }
 
+
+    //цена на других сайтах
+    $('.other-price__top').on('click', function(event) {
+        event.preventDefault();
+        $(this).next().slideToggle()
+
+    });
+
+    //блоки подсказок
+    $('.alert__close').on('click', function() {
+        $(this).parents('.alert').fadeOut();
+    });
+
 });
